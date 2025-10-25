@@ -13,7 +13,7 @@ export class Shops {
       address: 'Av. San Martín 123',
       hours: '19:00 - 00:00',
       delivery: true,
-      img: 'https://images.unsplash.com/photo-1601924582971-c9e6c0f7fa6d',
+      img: 'https://italiayotraspasiones.com/wp-content/uploads/2025/03/milan-lombardia-italia-comida-berbere-pizza.jpg',
       link: 'detalle.html?restaurante=donmario'
     },
     {
@@ -43,7 +43,7 @@ export class Shops {
       address: 'Calle Córdoba 321',
       hours: '11:00 - 22:00',
       delivery: true,
-      img: 'https://images.unsplash.com/photo-1606755962776-f4143a77b51b',
+      img: 'https://assets.unileversolutions.com/recipes-v2/209726.jpg',
       link: 'detalle.html?restaurante=empanadas123'
     },
     {
@@ -53,7 +53,7 @@ export class Shops {
       address: 'Av. Rivadavia 654',
       hours: '10:00 - 20:00',
       delivery: false,
-      img: 'https://images.unsplash.com/photo-1603074077277-fb0e5b04b21c',
+      img: 'https://mandolina.co/wp-content/uploads/2023/06/postre-de-maracuya.png',
       link: 'detalle.html?restaurante=dulcetentacion'
     }
   ];
