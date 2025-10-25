@@ -1,27 +1,39 @@
 <div class="container mt-4">
   <div class="d-flex justify-content-center gap-2 flex-wrap">
-    <button class="btn btn-outline-dark btn-sm filter-btn" data-type="all">
+    <button
+      class="btn btn-outline-dark btn-sm filter-btn"
+      [routerLink]="['/search/all']"
+    >
       Todos
     </button>
-    <button class="btn btn-outline-dark btn-sm filter-btn" data-type="pizza">
+    <button
+      class="btn btn-outline-dark btn-sm filter-btn"
+      [routerLink]="'/search/pizza'"
+    >
       Pizza
     </button>
     <button
       class="btn btn-outline-dark btn-sm filter-btn"
-      data-type="hamburguesas"
+      [routerLink]="'/search/hamburguesas'"
     >
       Hamburguesas
     </button>
     <button
       class="btn btn-outline-dark btn-sm filter-btn"
-      data-type="empanadas"
+      [routerLink]="'/search/empanadas'"
     >
       Empanadas
     </button>
-    <button class="btn btn-outline-dark btn-sm filter-btn" data-type="sushi">
+    <button
+      class="btn btn-outline-dark btn-sm filter-btn"
+      [routerLink]="'/search/sushi'"
+    >
       Sushi
     </button>
-    <button class="btn btn-outline-dark btn-sm filter-btn" data-type="postres">
+    <button
+      class="btn btn-outline-dark btn-sm filter-btn"
+      [routerLink]="'/search/postres'"
+    >
       Postres
     </button>
   </div>
