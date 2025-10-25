@@ -1,0 +1,12 @@
+<div class="card h-100">
+  <img [src]="shop().img" class="card-img-top" [alt]="shop().type" />
+  <div class="card-body">
+    <h6 class="card-title fw-bold mb-1">{{ shop().name }}</h6>
+    <span class="badge bg-danger mb-2">{{ shop().type }}</span>
+    <p class="mb-2">{{ shop().description }}</p>
+    <p class="info-line"><i class="bi bi-geo-alt"></i>{{ shop().address }}</p>
+    <p class="info-line"><i class="bi bi-clock"></i>{{ shop().hours }}</p>
+    <p class="info-line"><i class="bi bi-bicycle"></i>{{ shop().delivery }}</p>
+    <!-- <a href="detalle.html?restaurante=donmario" class="stretched-link"></a> -->
+  </div>
+</div>
