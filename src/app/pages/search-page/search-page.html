@@ -1,7 +1,10 @@
-<div class="container my-5 mb-5">
-  <div class="row g-4" id="restaurantList">
+<h3 class="text-center fw-semibold my-4 search-text h-25">
+  Comercios disponibles para tu selección
+</h3>
+<div class="container my-5">
+  <div class="row g-4">
     @for (shop of shops(); track $index) {
-    <div class="col-12 col-sm-6 col-md-4 restaurant-card" data-type="pizza">
+    <div class="col-12 col-sm-6 col-md-4 shop-card" data-type="pizza">
       <card-item [shop]="shop" />
     </div>
     }
