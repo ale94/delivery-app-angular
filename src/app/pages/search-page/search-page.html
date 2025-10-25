@@ -1,0 +1,9 @@
+<div class="container my-5 mb-5 pb-5">
+  <div class="row g-4" id="restaurantList">
+    @for (shop of shops(); track $index) {
+    <div class="col-12 col-sm-6 col-md-4 restaurant-card" data-type="pizza">
+      <card-item [shop]="shop" />
+    </div>
+    }
+  </div>
+</div>
