@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@import "bootstrap-icons/font/bootstrap-icons.css";
+
+body {
+  background-color: #f8f9fa;
+}
+
+header .navbar {
+  background: linear-gradient(135deg, #ff6b6b, #f06595);
+  color: white;
+}
+
+.hero-title {
+  font-size: 2rem;
+}
+.hero-text {
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.shop-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 12px;
+}
+
+.shop-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 140px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.card-body {
+  font-size: 0.9rem;
+}
+
+.info-line {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.badge {
+  font-size: 0.75rem;
+}
+
+/* @media (min-width: 768px) {
+  .card {
+    height: 100%;
+  }
+} */
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  .hero-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+  .hero-text {
+    font-size: 0.8rem;
+  }
+}
