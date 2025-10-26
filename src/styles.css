@@ -2,6 +2,18 @@
 
 body {
   background-color: #f8f9fa !important;
+  font-family: "Noto Sans", sans-serif !important;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-size: 26px !important;
+  font-style: normal;
 }
 
 header {
