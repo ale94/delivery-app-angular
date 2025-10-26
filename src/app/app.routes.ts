@@ -4,12 +4,16 @@ import { SearchPage } from './pages/search-page/search-page';
 
 export const routes: Routes = [
   {
-    path: "home",
-    component: HomePage
+    path: "inicio",
+    component: HomePage,
   },
   {
-    path: "search/:food",
+    path: "buscar/:comida",
     component: SearchPage
+  },
+  {
+    path: "**",
+    redirectTo: "inicio",
   }
 
 ];
