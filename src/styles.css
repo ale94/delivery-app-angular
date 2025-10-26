@@ -1,17 +1,17 @@
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
 body {
-  background-color: #f8f9fa;
+  background-color: #f8f9fa !important;
 }
 
-header .navbar {
-  background: linear-gradient(135deg, #ff6b6b, #f06595);
-  color: white;
+header {
+  background-color: #9b5de0;
 }
 
 .hero-title {
   font-size: 2rem;
 }
+
 .hero-text {
   font-size: 1rem;
   max-width: 600px;
@@ -24,7 +24,8 @@ header .navbar {
 
 .shop-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .card-img-top {
@@ -46,20 +47,15 @@ header .navbar {
   font-size: 0.75rem;
 }
 
-footer {
-  background: linear-gradient(135deg, #ff6b6b, #f06595);
-  color: white;
-}
-
 .search-text {
   font-size: 2rem;
 }
 
-/* @media (min-width: 768px) {
+@media (min-width: 768px) {
   .card {
     height: 100%;
   }
-} */
+}
 
 @media (max-width: 768px) {
   .hero-title {
