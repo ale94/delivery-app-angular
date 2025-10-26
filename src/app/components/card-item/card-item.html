@@ -4,9 +4,13 @@
     <h6 class="card-title fw-bold mb-1">{{ shop().name }}</h6>
     <span class="badge bg-danger mb-2">{{ shop().type }}</span>
     <p class="mb-2">{{ shop().description }}</p>
-    <p class="info-line"><i class="bi bi-geo-alt"></i>{{ shop().address }}</p>
-    <p class="info-line"><i class="bi bi-clock"></i>{{ shop().hours }}</p>
-    <p class="info-line"><i class="bi bi-bicycle"></i>{{ shop().delivery }}</p>
+    <p class="info-line"><i class="bi bi-geo-alt"></i> {{ shop().address }}</p>
+    <p class="info-line"><i class="bi bi-clock"></i> {{ shop().hours }}</p>
+    @if (shop().delivery) {
+    <p class="info-line"><i class="bi bi-bicycle"></i> Envío a Domicilio: ${{shop().deliveryPrice}}</p>
+    }@else {
+      <p class="info-line"><i class="bi bi-shop"></i> Solo retiro en comercio.</p>
+    }
     <!-- <a href="detalle.html?restaurante=donmario" class="stretched-link"></a> -->
   </div>
 </div>
