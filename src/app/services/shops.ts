@@ -13,6 +13,7 @@ export class Shops {
       address: 'Av. San Martín 123',
       hours: '19:00 - 00:00',
       delivery: true,
+      deliveryPrice: 100,
       img: 'https://italiayotraspasiones.com/wp-content/uploads/2025/03/milan-lombardia-italia-comida-berbere-pizza.jpg',
       link: 'detalle.html?restaurante=donmario'
     },
@@ -23,6 +24,7 @@ export class Shops {
       address: 'Calle Falsa 456',
       hours: '12:00 - 23:00',
       delivery: true,
+      deliveryPrice: 150,
       img: 'https://images.unsplash.com/photo-1550547660-d9450f859349',
       link: 'detalle.html?restaurante=burgertown'
     },
@@ -32,6 +34,7 @@ export class Shops {
       description: 'Sushi fresco y creativo 🍣',
       address: 'Av. Libertador 789',
       hours: '18:00 - 23:30',
+      deliveryPrice: 0,
       delivery: false,
       img: 'https://images.unsplash.com/photo-1553621042-f6e147245754',
       link: 'detalle.html?restaurante=sushimaster'
@@ -43,6 +46,7 @@ export class Shops {
       address: 'Calle Córdoba 321',
       hours: '11:00 - 22:00',
       delivery: true,
+      deliveryPrice: 200,
       img: 'https://assets.unileversolutions.com/recipes-v2/209726.jpg',
       link: 'detalle.html?restaurante=empanadas123'
     },
@@ -53,6 +57,7 @@ export class Shops {
       address: 'Av. Rivadavia 654',
       hours: '10:00 - 20:00',
       delivery: false,
+      deliveryPrice: 0,
       img: 'https://mandolina.co/wp-content/uploads/2023/06/postre-de-maracuya.png',
       link: 'detalle.html?restaurante=dulcetentacion'
     }

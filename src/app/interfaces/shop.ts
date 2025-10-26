@@ -5,6 +5,7 @@ export interface Shop {
   address: string;
   hours: string;
   delivery: boolean;
+  deliveryPrice: number;
   img: string;
   link: string;
 }
