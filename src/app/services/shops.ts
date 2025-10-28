@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { computed, Injectable, signal } from '@angular/core';
 import { Shop } from '../interfaces/shop';
 
 @Injectable({
@@ -7,6 +7,7 @@ import { Shop } from '../interfaces/shop';
 export class Shops {
   data: Shop[] = [
     {
+      id: 1,
       name: 'Pizzería Don Mario',
       type: 'pizza',
       description: 'Pizzas artesanales con masa madre y horno a leña 🍕',
@@ -18,6 +19,7 @@ export class Shops {
       link: 'detalle.html?restaurante=donmario'
     },
     {
+      id: 2,
       name: 'Burger Town',
       type: 'hamburguesas',
       description: 'Hamburguesas gourmet con papas caseras 🍔',
@@ -29,6 +31,7 @@ export class Shops {
       link: 'detalle.html?restaurante=burgertown'
     },
     {
+      id: 3,
       name: 'Sushi Master',
       type: 'sushi',
       description: 'Sushi fresco y creativo 🍣',
@@ -40,6 +43,7 @@ export class Shops {
       link: 'detalle.html?restaurante=sushimaster'
     },
     {
+      id: 4,
       name: 'Empanadas La 123',
       type: 'empanadas',
       description: 'Empanadas caseras de carne, pollo y jamón y queso 🥟',
@@ -51,6 +55,7 @@ export class Shops {
       link: 'detalle.html?restaurante=empanadas123'
     },
     {
+      id: 5,
       name: 'Dulce Tentación',
       type: 'postres',
       description: 'Pasteles, tartas y postres artesanales 🍰',
@@ -76,6 +81,10 @@ export class Shops {
   getShopsByType(type: string): Shop[] {
     if (!type || type === 'all') return this.shops();
     return this.shops().filter(shop => shop.type === type);
+  }
+
+  getShopById(id: number): Shop | undefined {
+    return this.shops().find(s => s.id === id);
   }
 
 
