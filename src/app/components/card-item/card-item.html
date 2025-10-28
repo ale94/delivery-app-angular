@@ -1,4 +1,4 @@
-<div class="card h-100">
+<div class="card h-100" (click)="goToShop(shop().id)">
   <img [src]="shop().img" class="card-img-top" [alt]="shop().type" />
   <div class="card-body">
     <h6 class="card-title fw-bold mb-1">{{ shop().name }}</h6>
@@ -7,10 +7,13 @@
     <p class="info-line"><i class="bi bi-geo-alt"></i> {{ shop().address }}</p>
     <p class="info-line"><i class="bi bi-clock"></i> {{ shop().hours }}</p>
     @if (shop().delivery) {
-    <p class="info-line"><i class="bi bi-bicycle"></i> Envío a Domicilio: ${{shop().deliveryPrice}}</p>
+    <p class="info-line">
+      <i class="bi bi-bicycle"></i> Envío a Domicilio: ${{
+        shop().deliveryPrice
+      }}
+    </p>
     }@else {
-      <p class="info-line"><i class="bi bi-shop"></i> Solo retiro en comercio.</p>
+    <p class="info-line"><i class="bi bi-shop"></i> Solo retiro en comercio.</p>
     }
-    <!-- <a href="detalle.html?restaurante=donmario" class="stretched-link"></a> -->
   </div>
 </div>

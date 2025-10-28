@@ -1,5 +1,6 @@
-import { Component, input } from '@angular/core';
+import { Component, inject, input } from '@angular/core';
 import { Shop } from '../../interfaces/shop';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'card-item',
@@ -8,6 +9,12 @@ import { Shop } from '../../interfaces/shop';
 })
 export class CardItem {
 
+  router = inject(Router);
+
   shop = input.required<Shop>();
+
+  goToShop(id: number) {
+    this.router.navigate(['/comercio', id]);
+  }
 
 }
