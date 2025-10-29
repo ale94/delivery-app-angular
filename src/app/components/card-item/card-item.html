@@ -1,9 +1,9 @@
-<div class="card h-100" (click)="goToShop(shop().id)">
+<div class="card h-100 card-click" (click)="goToShop(shop().id)">
   <img [src]="shop().img" class="card-img-top" [alt]="shop().type" />
   <div class="card-body">
     <h6 class="card-title fw-bold mb-1">{{ shop().name }}</h6>
     <span class="badge bg-danger mb-2">{{ shop().type }}</span>
-    <p class="mb-2">{{ shop().description }}</p>
+    <p class="mb-2 description">{{ shop().description }}</p>
     <p class="info-line"><i class="bi bi-geo-alt"></i> {{ shop().address }}</p>
     <p class="info-line"><i class="bi bi-clock"></i> {{ shop().hours }}</p>
     @if (shop().delivery) {
@@ -15,5 +15,8 @@
     }@else {
     <p class="info-line"><i class="bi bi-shop"></i> Solo retiro en comercio.</p>
     }
+    <div class="text-end mt-2 view-more">
+      <span class="fw-semibold">Ver menú </span> <i class="bi bi-arrow-right-circle-fill"></i>
+    </div>
   </div>
 </div>
