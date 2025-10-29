@@ -27,16 +27,6 @@ header {
   max-width: 600px;
 }
 
-.shop-card {
-  transition: transform 0.2s, box-shadow 0.2s;
-  border-radius: 12px;
-}
-
-.shop-card:hover {
-  transform: translateY(-3px);
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
-
 .card-img-top {
   height: 140px;
   object-fit: cover;
@@ -58,6 +48,33 @@ header {
 
 .search-text {
   font-size: 2rem;
+}
+
+.view-more {
+  font-weight: 500;
+  color: var(--primary-color, #9b5de0);
+}
+
+.view-more i {
+  font-size: 1.2rem;
+  vertical-align: middle;
+}
+
+.card-click {
+  cursor: pointer;
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+.card-click:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+}
+
+.description {
+  height: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
 }
 
 @media (min-width: 768px) {
