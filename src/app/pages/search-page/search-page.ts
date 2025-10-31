@@ -18,8 +18,14 @@ export class SearchPage implements OnInit {
 
   ngOnInit(): void {
     this.routeActivated.paramMap.subscribe(params => {
-      const type = params.get('comida') ?? 'all';
-      this.shops.set(this.shopService.getShopsByType(type));
+      const tag = params.get('comida') ?? 'todos';
+      if (tag == "todos") {
+        this.shops.set(this.shopService.shops());
+        return;
+      }
+      this.shopService.getShopsByTag(tag).subscribe(resp => {
+        this.shops.set(resp);
+      });
     });
   }
 }

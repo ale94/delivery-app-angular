@@ -8,16 +8,18 @@ import { Shop } from '../../interfaces/shop';
   imports: [],
   templateUrl: './shop-page.html'
 })
-export class ShopPage implements OnInit {
+export class ShopPage {
 
   routeActited = inject(ActivatedRoute);
   shopService = inject(Shops);
 
-  shop = signal<Shop | undefined>(undefined);
+  shop = signal<Shop | null>(null);
 
   ngOnInit(): void {
     const id = Number(this.routeActited.snapshot.paramMap.get('id'));
-    this.shop.set(this.shopService.getShopById(id));
+    this.shopService.getShopById(id).subscribe(resp => {
+      this.shop.set(resp);
+    });
   }
 
 

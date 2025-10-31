@@ -1,22 +1,27 @@
 <div class="card h-100 card-click" (click)="goToShop(shop().id)">
-  <img [src]="shop().img" class="card-img-top" [alt]="shop().type" />
+  <img [src]="shop().img" class="card-img-top" [alt]="shop().description" />
   <div class="card-body">
     <h6 class="card-title fw-bold mb-1">{{ shop().name }}</h6>
-    <span class="badge bg-danger mb-2">{{ shop().type }}</span>
+    <div class="d-flex flex-wrap gap-1">
+      @for (tag of shop().tags; track tag) {
+        <span class="badge bg-danger mb-2">{{ tag }}</span>
+      }
+    </div>
     <p class="mb-2 description">{{ shop().description }}</p>
     <p class="info-line"><i class="bi bi-geo-alt"></i> {{ shop().address }}</p>
     <p class="info-line"><i class="bi bi-clock"></i> {{ shop().hours }}</p>
-    @if (shop().delivery) {
-    <p class="info-line">
-      <i class="bi bi-bicycle"></i> Envío a Domicilio: ${{
-        shop().deliveryPrice
-      }}
-    </p>
-    }@else {
-    <p class="info-line"><i class="bi bi-shop"></i> Solo retiro en comercio.</p>
+    @if (shop().hasDelivery) {
+      <p class="info-line">
+        <i class="bi bi-bicycle"></i> Envío a Domicilio
+      </p>
+    } @else {
+      <p class="info-line">
+        <i class="bi bi-shop"></i> Solo retiro en comercio
+      </p>
     }
     <div class="text-end mt-2 view-more">
-      <span class="fw-semibold">Ver menú </span> <i class="bi bi-arrow-right-circle-fill"></i>
+      <span class="fw-semibold">Ver menú </span>
+      <i class="bi bi-arrow-right-circle-fill"></i>
     </div>
   </div>
 </div>

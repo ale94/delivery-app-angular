@@ -74,17 +74,15 @@
   <div class="bg-white p-3 rounded-3 shadow-sm mb-4">
     <div class="d-flex flex-column gap-2">
       <div class="small-info text-muted">
-        <i class="bi bi-geo-alt-fill text-danger"></i> Av. Principal 123, Ciudad
-        Local
+        <i class="bi bi-geo-alt-fill text-danger"></i> {{ shop()?.address }}
       </div>
 
       <div class="small-info text-muted">
-        <i class="bi bi-clock text-danger"></i> Horario: 11:00 a 15:00 | 19:00 a
-        00:00
+        <i class="bi bi-clock text-danger"></i> {{ shop()?.hours }}
       </div>
 
       <div class="small-info text-muted">
-        <i class="bi bi-telephone text-danger"></i> +54 9 351 555-1234
+        <i class="bi bi-telephone text-danger"></i> {{ shop()?.phone }}
       </div>
 
       <div class="small-info">
@@ -93,72 +91,29 @@
     </div>
   </div>
 
-  <!-- Categoría PIZZAS -->
   <section class="mb-5">
-    <div class="category-title">🍕 Pizzas</div>
+    <div class="category-title">Menu</div>
     <div class="row g-3 mt-2">
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="card shadow-sm h-100">
-          <img
-            src="https://picsum.photos/400/300?pizza=1"
-            class="product-img"
-          />
-          <div class="card-body">
-            <p class="fw-semibold mb-1">Pizza Muzza</p>
-            <p class="price mb-1">$2.200</p>
-            <p class="small text-muted">Salsa, queso mozzarella, orégano</p>
-          </div>
-          <div class="p-2">
-            <button class="btn btn-danger btn-sm w-100">
-              <i class="bi bi-cart-plus"></i> Agregar
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="card shadow-sm h-100">
-          <img
-            src="https://picsum.photos/400/300?pizza=2"
-            class="product-img"
-          />
-          <div class="card-body">
-            <p class="fw-semibold mb-1">Napolitana</p>
-            <p class="price mb-1">$2.600</p>
-            <p class="small text-muted">Muzza, tomate fresco y albahaca</p>
-          </div>
-          <div class="p-2">
-            <button class="btn btn-danger btn-sm w-100">
-              <i class="bi bi-cart-plus"></i> Agregar
-            </button>
+      @for (item of shop()?.menu ?? []; track item.id) {
+        <div class="col-6 col-md-4 col-lg-3">
+          <div class="card shadow-sm h-100">
+            <img
+              src="https://picsum.photos/400/300?pizza=1"
+              class="product-img"
+            />
+            <div class="card-body">
+              <p class="fw-semibold mb-1">{{ item.name }}</p>
+              <p class="price mb-1">{{ item.price }}</p>
+              <p class="small text-muted">{{ item.description }}</p>
+            </div>
+            <div class="p-2">
+              <button class="btn btn-danger btn-sm w-100">
+                <i class="bi bi-cart-plus"></i> Agregar
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Categoría HAMBURGUESAS -->
-  <section class="mb-5">
-    <div class="category-title">🍔 Hamburguesas</div>
-    <div class="row g-3 mt-2">
-      <div class="col-6 col-md-4 col-lg-3">
-        <div class="card shadow-sm h-100">
-          <img
-            src="https://picsum.photos/400/300?burger=1"
-            class="product-img"
-          />
-          <div class="card-body">
-            <p class="fw-semibold mb-1">Clásica</p>
-            <p class="price mb-1">$1.800</p>
-            <p class="small text-muted">Carne, lechuga, tomate, aderezo</p>
-          </div>
-          <div class="p-2">
-            <button class="btn btn-danger btn-sm w-100">
-              <i class="bi bi-cart-plus"></i> Agregar
-            </button>
-          </div>
-        </div>
-      </div>
+      }
     </div>
   </section>
 </main>
