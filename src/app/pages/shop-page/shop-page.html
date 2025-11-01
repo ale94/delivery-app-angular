@@ -1,47 +1,8 @@
-<style>
-  .category-title {
-    background: var(--bs-light);
-    padding: 0.6rem 1rem;
-    border-left: 4px solid var(--bs-danger);
-    border-radius: 0.25rem;
-    font-weight: 600;
-    font-size: 1.1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .product-img {
-    height: 130px;
-    object-fit: cover;
-  }
-  .card {
-    border: none;
-    transition: transform 0.1s ease-in;
-  }
-  .card:hover {
-    transform: translateY(-3px);
-  }
-  .price {
-    color: var(--bs-success);
-    font-weight: 700;
-    font-size: 0.95rem;
-  }
-  .shop-banner {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 0.5rem;
-  }
-  .small-info i {
-    font-size: 1rem;
-  }
-</style>
-
 <header class="bg-white shadow-sm py-3 mb-4">
   <div class="container d-flex justify-content-between align-items-center">
     <div class="d-flex align-items-center gap-2">
       <img
-        src="https://picsum.photos/100/100?shop"
+        [src]="shop()?.banner"
         class="rounded-circle"
         width="50"
         height="50"
@@ -65,10 +26,7 @@
 
 <main class="container">
   <!-- Banner imagen del comercio -->
-  <img
-    src="https://picsum.photos/1200/400?food-banner"
-    class="shop-banner mb-4"
-  />
+  <img [src]="shop()?.banner" class="shop-banner mb-4" />
 
   <!-- Información del comercio -->
   <div class="bg-white p-3 rounded-3 shadow-sm mb-4">
@@ -96,14 +54,11 @@
     <div class="row g-3 mt-2">
       @for (item of shop()?.menu ?? []; track item.id) {
         <div class="col-6 col-md-4 col-lg-3">
-          <div class="card shadow-sm h-100">
-            <img
-              src="https://picsum.photos/400/300?pizza=1"
-              class="product-img"
-            />
-            <div class="card-body">
+          <div class="card shadow-sm h-100 p">
+            <img [src]="item.img" class="product-img" />
+            <div class="card-body pb-0">
               <p class="fw-semibold mb-1">{{ item.name }}</p>
-              <p class="price mb-1">{{ item.price }}</p>
+              <p class="price mb-1">${{ item.price }}</p>
               <p class="small text-muted">{{ item.description }}</p>
             </div>
             <div class="p-2">
